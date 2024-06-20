@@ -1,0 +1,97 @@
+//
+// ER/Studio Data Architect 
+// Project :      library database.dm1
+//
+// Date Created : Wednesday, June 19, 2024 21:05:15
+// Target DBMS : MongoDB 4.x
+//
+
+// 
+// COLLECTION: book 
+//
+
+{
+    _id : new ObjectId(),
+    title : "",
+    author : "",
+    available : false,
+    language : "",
+    pages : NumberInt(0),
+    published_date : new Date(),
+    publisher_id : ObjectId(""),
+    checkout : [ 
+    {
+        date : new Date(),
+        duration : NumberInt(0),
+        patron_id : ObjectId(""),
+        library_id : ObjectId("")
+    } ],
+    chapter : [ 
+    {
+        Chapter Number : "",
+        heading : "",
+        page count : NumberInt(0),
+        section : [ 
+        {
+            section_number : "",
+            number of paragraphs : NumberInt(0),
+            word count : NumberInt(0)
+        } ]
+    } ]
+}
+
+// 
+// COLLECTION: patron 
+//
+
+{
+    _id : new ObjectId(),
+    patron_number : "",
+    name : "",
+    address : [ 
+    {
+        address id : "",
+        street : "",
+        city : "",
+        state : "",
+        zip : ""
+    } ]
+}
+
+// 
+// COLLECTION: publisher 
+//
+
+{
+    _id : new ObjectId(),
+    name : "",
+    founded : new Date(),
+    location : "",
+    address : [ 
+    {
+        address id : "",
+        street : "",
+        city : "",
+        state : "",
+        zip : ""
+    } ]
+}
+
+// 
+// COLLECTION: library 
+//
+
+{
+    _id : new ObjectId(),
+    library_number : "",
+    library name : "",
+    address : [ 
+    {
+        address id : "",
+        street : "",
+        city : "",
+        state : "",
+        zip : ""
+    } ]
+}
+

@@ -1,0 +1,56 @@
+//
+// ER/Studio Data Architect 
+// Project :      Branch_test.DM1
+//
+// Date Created : Wednesday, June 19, 2024 16:18:06
+// Target DBMS : MongoDB 4.x
+//
+
+// 
+// COLLECTION: test2 
+//
+
+{
+    _id : new ObjectId(),
+    p2 : "",
+    col3char : "",
+    col4char : "",
+    test1_id : ObjectId("")
+}
+
+// 
+// COLLECTION: test1 
+//
+
+{
+    _id : new ObjectId(),
+    p1identity : NumberInt(0),
+    col1char : "",
+    col2char : "",
+    computed : 0
+}
+
+// 
+// COLLECTION: Entity1 
+//
+
+{
+    _id : new ObjectId(),
+    id : "",
+    name : ""
+}
+
+// 
+// COLLECTION: ParentDomain 
+//
+
+{
+    _id : new ObjectId(),
+    domaincol : NumberInt(0),
+    colvarchar : "",
+    ChildDomain : [ 
+    {
+        primarycol : ""
+    } ]
+}
+
