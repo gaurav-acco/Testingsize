@@ -2,19 +2,18 @@
 -- ER/Studio Data Architect SQL Code Generation
 -- Project :      DATA MODEL
 --
--- Date Created : Saturday, June 22, 2024 16:31:52
+-- Date Created : Saturday, June 22, 2024 16:32:18
 -- Target DBMS : PostgreSQL 10.x-12.x
 --
 
 -- 
--- TABLE: "Entity2" 
+-- TABLE: "Entity1" 
 --
 
-CREATE TABLE "Entity2"(
-    ss     character(10)    NOT NULL,
-    ddd    character(10),
+CREATE TABLE "Entity1"(
     aa     character(10)    NOT NULL,
-    PRIMARY KEY (ss)
+    aaa    character(10),
+    PRIMARY KEY (aa)
 )
 ;
 
@@ -45,16 +44,6 @@ CREATE TABLE "Entity4"(
 )
 ;
 
-
-
--- 
--- TABLE: "Entity2" 
---
-
-ALTER TABLE "Entity2" ADD CONSTRAINT "RefEntity11" 
-    FOREIGN KEY (aa)
-    REFERENCES "Entity1"(aa)
-;
 
 
 -- 
