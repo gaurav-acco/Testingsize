@@ -1,8 +1,8 @@
 
 -- Drop Referencing Constraints SQL
 
-ALTER TABLE "public"."Entity4"
-    DROP CONSTRAINT "RefEntity23" CASCADE 
+ALTER TABLE "public"."Entity3"
+    DROP CONSTRAINT "RefEntity22" CASCADE 
 
 ;
 
@@ -12,18 +12,14 @@ ALTER TABLE "public"."Entity2"
     DROP CONSTRAINT "RefEntity11" CASCADE 
 ;
 
--- Standard Alter Table SQL
-
-ALTER TABLE "public"."Entity4" RENAME CONSTRAINT "PK3" TO "PK4"
-;
-
 -- Drop Constraint, Rename and Create Table SQL
 
-CREATE TABLE "public"."Entity3"
+CREATE TABLE "public"."Entity4"
 (
+    ss character(10)  NOT NULL,
+    w  character(10),
     e  character(10),
-    f  character(10),
-    ss character(10)
+    CONSTRAINT "PK4" PRIMARY KEY (ss)
 )
 WITH (
     OIDS=false
@@ -34,7 +30,7 @@ WITH (
 -- Add Referencing Foreign Keys SQL
 
 
-ALTER TABLE "public"."Entity3"
+ALTER TABLE "public"."Entity4"
     ADD 
     FOREIGN KEY (ss)
     REFERENCES "public"."Entity2" (ss)
@@ -45,7 +41,7 @@ ALTER TABLE "public"."Entity3"
 
 ;
 
-ALTER TABLE "public"."Entity4"
+ALTER TABLE "public"."Entity3"
     ADD 
     FOREIGN KEY (ss)
     REFERENCES "public"."Entity2" (ss)
